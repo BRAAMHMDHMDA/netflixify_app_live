@@ -123,7 +123,7 @@
         var player = new Playerjs({
             id: "play",
             file: file,
-            poster: "{{ $movie->poster_path }}",
+            poster: "{{ $movie->poster_url }}",
             default_quality: "Auto",
         });
 

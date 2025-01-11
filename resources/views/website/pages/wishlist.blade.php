@@ -45,7 +45,7 @@
                                 </div>
 
                                 <div class="d-flex movie__cta justify-content-center align-items-center">
-                                    <a href="{{route('movies.show',$movie->id)}}" class="btn btn-primary text-capitalize flex-fill mr-2">
+                                    <a href="{{route('movies.show',$movie->slug)}}" class="btn btn-primary text-capitalize flex-fill mr-2">
                                         <i class="fas fa-play"></i>
                                         watch now
                                     </a>

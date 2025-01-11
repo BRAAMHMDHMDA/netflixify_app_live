@@ -323,185 +323,185 @@
             </div>
             <!--end::Sign-in Method-->
 
-            <!--begin::Notifications-->
-            <div class="card mb-5 mb-xl-10">
-                <!--begin::Card header-->
-                <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_notifications" aria-expanded="true" aria-controls="kt_account_notifications">
-                    <div class="card-title m-0">
-                        <h3 class="fw-bold m-0">Notifications</h3>
-                    </div>
-                </div>
-                <!--begin::Card header-->
-                <!--begin::Content-->
-                <div id="kt_account_settings_notifications" class="collapse show">
-                    <!--begin::Form-->
-                    <form class="form">
-                        <!--begin::Card body-->
-                        <div class="card-body border-top px-9 pt-3 pb-4">
-                            <!--begin::Table-->
-                            <div class="table-responsive">
-                                <table class="table table-row-dashed border-gray-300 align-middle gy-6">
-                                    <tbody class="fs-6 fw-semibold">
-                                    <!--begin::Table row-->
-                                    <tr>
-                                        <td class="min-w-250px fs-4 fw-bold">Notifications</td>
-                                        <td class="w-125px">
-                                            <div class="form-check form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="" id="kt_settings_notification_email" checked="checked" data-kt-check="true" data-kt-check-target="[data-kt-settings-notification=email]" />
-                                                <label class="form-check-label ps-2" for="kt_settings_notification_email">Email</label>
-                                            </div>
-                                        </td>
-                                        <td class="w-125px">
-                                            <div class="form-check form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="" id="kt_settings_notification_phone" checked="checked" data-kt-check="true" data-kt-check-target="[data-kt-settings-notification=phone]" />
-                                                <label class="form-check-label ps-2" for="kt_settings_notification_phone">Phone</label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!--begin::Table row-->
-                                    <!--begin::Table row-->
-                                    <tr>
-                                        <td>Billing Updates</td>
-                                        <td>
-                                            <div class="form-check form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="1" id="billing1" checked="checked" data-kt-settings-notification="email" />
-                                                <label class="form-check-label ps-2" for="billing1"></label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="" id="billing2" checked="checked" data-kt-settings-notification="phone" />
-                                                <label class="form-check-label ps-2" for="billing2"></label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!--begin::Table row-->
-                                    <!--begin::Table row-->
-                                    <tr>
-                                        <td>New Team Members</td>
-                                        <td>
-                                            <div class="form-check form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="" id="team1" checked="checked" data-kt-settings-notification="email" />
-                                                <label class="form-check-label ps-2" for="team1"></label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="" id="team2" data-kt-settings-notification="phone" />
-                                                <label class="form-check-label ps-2" for="team2"></label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!--begin::Table row-->
-                                    <!--begin::Table row-->
-                                    <tr>
-                                        <td>Completed Projects</td>
-                                        <td>
-                                            <div class="form-check form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="" id="project1" data-kt-settings-notification="email" />
-                                                <label class="form-check-label ps-2" for="project1"></label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-check form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="" id="project2" checked="checked" data-kt-settings-notification="phone" />
-                                                <label class="form-check-label ps-2" for="project2"></label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!--begin::Table row-->
-                                    <!--begin::Table row-->
-                                    <tr>
-                                        <td class="border-bottom-0">Newsletters</td>
-                                        <td class="border-bottom-0">
-                                            <div class="form-check form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="" id="newsletter1" data-kt-settings-notification="email" />
-                                                <label class="form-check-label ps-2" for="newsletter1"></label>
-                                            </div>
-                                        </td>
-                                        <td class="border-bottom-0">
-                                            <div class="form-check form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="" id="newsletter2" data-kt-settings-notification="phone" />
-                                                <label class="form-check-label ps-2" for="newsletter2"></label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!--begin::Table row-->
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!--end::Table-->
-                        </div>
-                        <!--end::Card body-->
-                        <!--begin::Card footer-->
-                        <div class="card-footer d-flex justify-content-end py-6 px-9">
-                            <button class="btn btn-light btn-active-light-primary me-2" onclick="window.history.back()">Discard</button>
-                            <button class="btn btn-primary px-6">Save Changes</button>
-                        </div>
-                        <!--end::Card footer-->
-                    </form>
-                    <!--end::Form-->
-                </div>
-                <!--end::Content-->
-            </div>
-            <!--end::Notifications-->
-            <!--begin::Deactivate Account-->
-            <div class="card">
-                <!--begin::Card header-->
-                <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_deactivate" aria-expanded="true" aria-controls="kt_account_deactivate">
-                    <div class="card-title m-0">
-                        <h3 class="fw-bold m-0">Deactivate Account</h3>
-                    </div>
-                </div>
-                <!--end::Card header-->
-                <!--begin::Content-->
-                <div id="kt_account_settings_deactivate" class="collapse show">
-                    <!--begin::Form-->
-                    <form id="kt_account_deactivate_form" class="form">
-                        <!--begin::Card body-->
-                        <div class="card-body border-top p-9">
-                            <!--begin::Notice-->
-                            <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed mb-9 p-6">
-                                <!--begin::Icon-->
-                                <i class="ki-duotone ki-information fs-2tx text-warning me-4">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                    <span class="path3"></span>
-                                </i>
-                                <!--end::Icon-->
-                                <!--begin::Wrapper-->
-                                <div class="d-flex flex-stack flex-grow-1">
-                                    <!--begin::Content-->
-                                    <div class="fw-semibold">
-                                        <h4 class="text-gray-900 fw-bold">You Are Deactivating Your Account</h4>
-                                        <div class="fs-6 text-gray-700">For extra security, this requires you to confirm your email or phone number when you reset yousignr password.
-                                            <br />
-                                            <a class="fw-bold" href="#">Learn more</a></div>
-                                    </div>
-                                    <!--end::Content-->
-                                </div>
-                                <!--end::Wrapper-->
-                            </div>
-                            <!--end::Notice-->
-                            <!--begin::Form input row-->
-                            <div class="form-check form-check-solid fv-row">
-                                <input name="deactivate" class="form-check-input" type="checkbox" value="" id="deactivate" />
-                                <label class="form-check-label fw-semibold ps-2 fs-6" for="deactivate">I confirm my account deactivation</label>
-                            </div>
-                            <!--end::Form input row-->
-                        </div>
-                        <!--end::Card body-->
-                        <!--begin::Card footer-->
-                        <div class="card-footer d-flex justify-content-end py-6 px-9">
-                            <button id="kt_account_deactivate_account_submit" type="submit" class="btn btn-danger fw-semibold">Deactivate Account</button>
-                        </div>
-                        <!--end::Card footer-->
-                    </form>
-                    <!--end::Form-->
-                </div>
-                <!--end::Content-->
-            </div>
-            <!--end::Deactivate Account-->
+{{--            <!--begin::Notifications-->--}}
+{{--            <div class="card mb-5 mb-xl-10">--}}
+{{--                <!--begin::Card header-->--}}
+{{--                <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_notifications" aria-expanded="true" aria-controls="kt_account_notifications">--}}
+{{--                    <div class="card-title m-0">--}}
+{{--                        <h3 class="fw-bold m-0">Notifications</h3>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <!--begin::Card header-->--}}
+{{--                <!--begin::Content-->--}}
+{{--                <div id="kt_account_settings_notifications" class="collapse show">--}}
+{{--                    <!--begin::Form-->--}}
+{{--                    <form class="form">--}}
+{{--                        <!--begin::Card body-->--}}
+{{--                        <div class="card-body border-top px-9 pt-3 pb-4">--}}
+{{--                            <!--begin::Table-->--}}
+{{--                            <div class="table-responsive">--}}
+{{--                                <table class="table table-row-dashed border-gray-300 align-middle gy-6">--}}
+{{--                                    <tbody class="fs-6 fw-semibold">--}}
+{{--                                    <!--begin::Table row-->--}}
+{{--                                    <tr>--}}
+{{--                                        <td class="min-w-250px fs-4 fw-bold">Notifications</td>--}}
+{{--                                        <td class="w-125px">--}}
+{{--                                            <div class="form-check form-check-custom form-check-solid">--}}
+{{--                                                <input class="form-check-input" type="checkbox" value="" id="kt_settings_notification_email" checked="checked" data-kt-check="true" data-kt-check-target="[data-kt-settings-notification=email]" />--}}
+{{--                                                <label class="form-check-label ps-2" for="kt_settings_notification_email">Email</label>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
+{{--                                        <td class="w-125px">--}}
+{{--                                            <div class="form-check form-check-custom form-check-solid">--}}
+{{--                                                <input class="form-check-input" type="checkbox" value="" id="kt_settings_notification_phone" checked="checked" data-kt-check="true" data-kt-check-target="[data-kt-settings-notification=phone]" />--}}
+{{--                                                <label class="form-check-label ps-2" for="kt_settings_notification_phone">Phone</label>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
+{{--                                    </tr>--}}
+{{--                                    <!--begin::Table row-->--}}
+{{--                                    <!--begin::Table row-->--}}
+{{--                                    <tr>--}}
+{{--                                        <td>Billing Updates</td>--}}
+{{--                                        <td>--}}
+{{--                                            <div class="form-check form-check-custom form-check-solid">--}}
+{{--                                                <input class="form-check-input" type="checkbox" value="1" id="billing1" checked="checked" data-kt-settings-notification="email" />--}}
+{{--                                                <label class="form-check-label ps-2" for="billing1"></label>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
+{{--                                        <td>--}}
+{{--                                            <div class="form-check form-check-custom form-check-solid">--}}
+{{--                                                <input class="form-check-input" type="checkbox" value="" id="billing2" checked="checked" data-kt-settings-notification="phone" />--}}
+{{--                                                <label class="form-check-label ps-2" for="billing2"></label>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
+{{--                                    </tr>--}}
+{{--                                    <!--begin::Table row-->--}}
+{{--                                    <!--begin::Table row-->--}}
+{{--                                    <tr>--}}
+{{--                                        <td>New Team Members</td>--}}
+{{--                                        <td>--}}
+{{--                                            <div class="form-check form-check-custom form-check-solid">--}}
+{{--                                                <input class="form-check-input" type="checkbox" value="" id="team1" checked="checked" data-kt-settings-notification="email" />--}}
+{{--                                                <label class="form-check-label ps-2" for="team1"></label>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
+{{--                                        <td>--}}
+{{--                                            <div class="form-check form-check-custom form-check-solid">--}}
+{{--                                                <input class="form-check-input" type="checkbox" value="" id="team2" data-kt-settings-notification="phone" />--}}
+{{--                                                <label class="form-check-label ps-2" for="team2"></label>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
+{{--                                    </tr>--}}
+{{--                                    <!--begin::Table row-->--}}
+{{--                                    <!--begin::Table row-->--}}
+{{--                                    <tr>--}}
+{{--                                        <td>Completed Projects</td>--}}
+{{--                                        <td>--}}
+{{--                                            <div class="form-check form-check-custom form-check-solid">--}}
+{{--                                                <input class="form-check-input" type="checkbox" value="" id="project1" data-kt-settings-notification="email" />--}}
+{{--                                                <label class="form-check-label ps-2" for="project1"></label>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
+{{--                                        <td>--}}
+{{--                                            <div class="form-check form-check-custom form-check-solid">--}}
+{{--                                                <input class="form-check-input" type="checkbox" value="" id="project2" checked="checked" data-kt-settings-notification="phone" />--}}
+{{--                                                <label class="form-check-label ps-2" for="project2"></label>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
+{{--                                    </tr>--}}
+{{--                                    <!--begin::Table row-->--}}
+{{--                                    <!--begin::Table row-->--}}
+{{--                                    <tr>--}}
+{{--                                        <td class="border-bottom-0">Newsletters</td>--}}
+{{--                                        <td class="border-bottom-0">--}}
+{{--                                            <div class="form-check form-check-custom form-check-solid">--}}
+{{--                                                <input class="form-check-input" type="checkbox" value="" id="newsletter1" data-kt-settings-notification="email" />--}}
+{{--                                                <label class="form-check-label ps-2" for="newsletter1"></label>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
+{{--                                        <td class="border-bottom-0">--}}
+{{--                                            <div class="form-check form-check-custom form-check-solid">--}}
+{{--                                                <input class="form-check-input" type="checkbox" value="" id="newsletter2" data-kt-settings-notification="phone" />--}}
+{{--                                                <label class="form-check-label ps-2" for="newsletter2"></label>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
+{{--                                    </tr>--}}
+{{--                                    <!--begin::Table row-->--}}
+{{--                                    </tbody>--}}
+{{--                                </table>--}}
+{{--                            </div>--}}
+{{--                            <!--end::Table-->--}}
+{{--                        </div>--}}
+{{--                        <!--end::Card body-->--}}
+{{--                        <!--begin::Card footer-->--}}
+{{--                        <div class="card-footer d-flex justify-content-end py-6 px-9">--}}
+{{--                            <button class="btn btn-light btn-active-light-primary me-2" onclick="window.history.back()">Discard</button>--}}
+{{--                            <button class="btn btn-primary px-6">Save Changes</button>--}}
+{{--                        </div>--}}
+{{--                        <!--end::Card footer-->--}}
+{{--                    </form>--}}
+{{--                    <!--end::Form-->--}}
+{{--                </div>--}}
+{{--                <!--end::Content-->--}}
+{{--            </div>--}}
+{{--            <!--end::Notifications-->--}}
+{{--            <!--begin::Deactivate Account-->--}}
+{{--            <div class="card">--}}
+{{--                <!--begin::Card header-->--}}
+{{--                <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_deactivate" aria-expanded="true" aria-controls="kt_account_deactivate">--}}
+{{--                    <div class="card-title m-0">--}}
+{{--                        <h3 class="fw-bold m-0">Deactivate Account</h3>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <!--end::Card header-->--}}
+{{--                <!--begin::Content-->--}}
+{{--                <div id="kt_account_settings_deactivate" class="collapse show">--}}
+{{--                    <!--begin::Form-->--}}
+{{--                    <form id="kt_account_deactivate_form" class="form">--}}
+{{--                        <!--begin::Card body-->--}}
+{{--                        <div class="card-body border-top p-9">--}}
+{{--                            <!--begin::Notice-->--}}
+{{--                            <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed mb-9 p-6">--}}
+{{--                                <!--begin::Icon-->--}}
+{{--                                <i class="ki-duotone ki-information fs-2tx text-warning me-4">--}}
+{{--                                    <span class="path1"></span>--}}
+{{--                                    <span class="path2"></span>--}}
+{{--                                    <span class="path3"></span>--}}
+{{--                                </i>--}}
+{{--                                <!--end::Icon-->--}}
+{{--                                <!--begin::Wrapper-->--}}
+{{--                                <div class="d-flex flex-stack flex-grow-1">--}}
+{{--                                    <!--begin::Content-->--}}
+{{--                                    <div class="fw-semibold">--}}
+{{--                                        <h4 class="text-gray-900 fw-bold">You Are Deactivating Your Account</h4>--}}
+{{--                                        <div class="fs-6 text-gray-700">For extra security, this requires you to confirm your email or phone number when you reset yousignr password.--}}
+{{--                                            <br />--}}
+{{--                                            <a class="fw-bold" href="#">Learn more</a></div>--}}
+{{--                                    </div>--}}
+{{--                                    <!--end::Content-->--}}
+{{--                                </div>--}}
+{{--                                <!--end::Wrapper-->--}}
+{{--                            </div>--}}
+{{--                            <!--end::Notice-->--}}
+{{--                            <!--begin::Form input row-->--}}
+{{--                            <div class="form-check form-check-solid fv-row">--}}
+{{--                                <input name="deactivate" class="form-check-input" type="checkbox" value="" id="deactivate" />--}}
+{{--                                <label class="form-check-label fw-semibold ps-2 fs-6" for="deactivate">I confirm my account deactivation</label>--}}
+{{--                            </div>--}}
+{{--                            <!--end::Form input row-->--}}
+{{--                        </div>--}}
+{{--                        <!--end::Card body-->--}}
+{{--                        <!--begin::Card footer-->--}}
+{{--                        <div class="card-footer d-flex justify-content-end py-6 px-9">--}}
+{{--                            <button id="kt_account_deactivate_account_submit" type="submit" class="btn btn-danger fw-semibold">Deactivate Account</button>--}}
+{{--                        </div>--}}
+{{--                        <!--end::Card footer-->--}}
+{{--                    </form>--}}
+{{--                    <!--end::Form-->--}}
+{{--                </div>--}}
+{{--                <!--end::Content-->--}}
+{{--            </div>--}}
+{{--            <!--end::Deactivate Account-->--}}
 
     @push('scripts')
         <script src="{{ asset('assets/js/custom/account/settings/signin-methods.js') }}"></script>

@@ -36,9 +36,9 @@ class StreamMovie implements ShouldQueue
         \ProtoneMedia\LaravelFFMpeg\Support\FFMpeg::fromDisk('media')
             ->open($this->movie->path)
             ->exportForHLS()
-            ->onProgress(function ($precent){
+            ->onProgress(function ($percentage) {
                 $this->movie->update([
-                    'percent' => $precent
+                    'percent' => $percentage
                 ]);
             })
             ->setSegmentLength(10) // optional
