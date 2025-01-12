@@ -31,7 +31,7 @@
     <p class="text-center">Create new account<a href="{{ route('register') }}"> Register</a></p>
 
     <hr>
-    <button class="btn btn-block btn-primary" style="background:#3b5998;">Login by Facebook</button>
-    <button class="btn btn-block btn-primary" style="background:#ea4335;">Login by Gmail</button>
+    <a class="btn btn-block btn-primary" style="background:#ea4335;" href="{{ route('auth.socialite.redirect', 'google') }}">Login by Google</a>
+    <a class="btn btn-block btn-primary" style="background:#3b5998;" href="{{ route('auth.socialite.redirect', 'facebook') }}">Login by Facebook</a>
 
 </form><!-- end of form -->

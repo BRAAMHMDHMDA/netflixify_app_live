@@ -6,12 +6,16 @@ use App\Http\Controllers\Website\{
     HomeController,
     MovieController,
     CategoryController,
+    SocialLoginController,
 };
 
 // ===================== Auth Routes =====================================
 Route::group(['middleware' => 'guest:web'],function (){
     Route::view('login', 'website.auth.login')->name('login');
     Route::view('register', 'website.auth.register')->name('register');
+
+    Route::get('/auth/{provider}/redirect', [SocialLoginController::class, 'redirect'])->name('auth.socialite.redirect');
+    Route::get('/auth/{provider}/callback', [SocialLoginController::class, 'callback'])->name('auth.socialite.callback');
 });
 
 // ===================== Logout Route & Action =====================================

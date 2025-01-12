@@ -87,33 +87,33 @@ return [
         'name_menu' => 'Social Login',
         'icon' => '<i class="ki-duotone ki-facebook fs-2 me-2"><span class="path1"></span><span class="path2"></span></i>',
         'settings' => [
-            'facebook.client_id' => [
+            'services.facebook.client_id' => [
                 'label' => 'Facebook Client ID',
                 'type' => 'text',
                 'validate' => 'string|max:255',
             ],
-            'facebook.cline_secret' => [
+            'services.facebook.cline_secret' => [
                 'label' => 'Facebook Client Secret',
-                'type' => 'email',
-                'validate' => 'email|max:255',
+                'type' => 'text',
+                'validate' => 'string|max:255',
             ],
-            'facebook.redirect_url' => [
+            'services.facebook.redirect_url' => [
                 'label' => 'Facebook Redirect Url',
                 'type' => 'string',
                 'validate' => 'string',
             ],
 
-            'google.client_id' => [
+            'services.google.client_id' => [
                 'label' => 'Google Client ID',
                 'type' => 'text',
                 'validate' => 'string|max:255',
             ],
-            'google.cline_secret' => [
+            'services.google.client_secret' => [
                 'label' => 'Google Client Secret',
-                'type' => 'email',
-                'validate' => 'email|max:255',
+                'type' => 'text',
+                'validate' => 'string|max:255',
             ],
-            'google.redirect_url' => [
+            'services.google.redirect' => [
                 'label' => 'Google Redirect Url',
                 'type' => 'string',
                 'validate' => 'string',

@@ -29,7 +29,7 @@
     <p class="text-center">Already have an account<a href="{{ route('login') }}"> Login</a></p>
 
     <hr>
-    <button class="btn btn-block btn-primary" style="background:#3b5998;"><span class="fab fa-facebook-f"></span> Login by facebook</button>
-    <button class="btn btn-block btn-primary" style="background:#ea4335;"><span class="fab fa-google"></span> Login by Gmail</button>
+    <a class="btn btn-block btn-primary" style="background:#ea4335;" href="{{ route('auth.socialite.redirect', 'google') }}">Login by Google</a>
+    <a class="btn btn-block btn-primary" style="background:#3b5998;" href="{{ route('auth.socialite.redirect', 'facebook') }}">Login by Facebook</a>
 
 </form><!-- end of form -->

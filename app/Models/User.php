@@ -24,16 +24,31 @@ class User extends Authenticatable
         'phone_number',
         'image_path',
         'password',
+        'provider',
+        'provider_id',
+        'provider_token',
     ];
     protected $withCount = 'fav_movies';
     protected $hidden = [
         'password',
         'remember_token',
+        'provider_token',
     ];
 
     protected $casts = [
         'email_verified_at' => 'datetime',
+//        'provider_token' => 'string',
     ];
+
+    public function setProviderTokenAttribute($value): void
+    {
+        $this->attributes['provider_token'] = encrypt($value);
+    }
+
+    public function getProviderTokenAttribute($value)
+    {
+        return decrypt($value);
+    }
 
     public function fav_movies(): BelongsToMany
     {
