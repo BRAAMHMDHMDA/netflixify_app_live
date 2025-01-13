@@ -1,8 +1,8 @@
 <!--begin::Head-->
 <head>
-    <title>{{ $title }}</title>
+    <title>{{config('app.name')}} | {{ $title }}</title>
     <meta charset="utf-8" />
-{{--    <link rel="shortcut icon" href="{{ asset('website_assets/images') }}" />--}}
+    <link rel="shortcut icon" href="{{ config('app.logo')  }}" />
 
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />

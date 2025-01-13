@@ -243,7 +243,7 @@
                                         <div class="col-lg-6">
                                             <div class="fv-row mb-0">
                                                 <label for="confirmemailpassword" class="form-label fs-6 fw-bold mb-3">Confirm Password</label>
-                                                <x-dash.form.input type="password" class="form-control-lg form-control-solid" name="password" id="confirmemailpassword" />
+                                                <x-dash.form.input type="password" class="form-control-lg form-control-solid" name="password" id="confirmemailpassword" autocomplete="off" />
                                             </div>
                                         </div>
                                     </div>
@@ -283,19 +283,19 @@
                                         <div class="col-lg-4">
                                             <div class="fv-row mb-0">
                                                 <label for="currentpassword" class="form-label fs-6 fw-bold mb-3">Current Password</label>
-                                                <x-dash.form.input type="password" class="form-control-lg form-control-solid" name="current_password" />
+                                                <x-dash.form.input type="password" class="form-control-lg form-control-solid" name="current_password" autocomplete="off" />
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="fv-row mb-0">
                                                 <label for="newpassword" class="form-label fs-6 fw-bold mb-3">New Password</label>
-                                                <x-dash.form.input type="password" class="form-control-lg form-control-solid" name="new_password" />
+                                                <x-dash.form.input type="password" class="form-control-lg form-control-solid" name="new_password" autocomplete="off"/>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="fv-row mb-0">
                                                 <label for="confirmpassword" class="form-label fs-6 fw-bold mb-3">Confirm New Password</label>
-                                                <x-dash.form.input type="password" class="form-control-lg form-control-solid" name="new_password_confirmation" />
+                                                <x-dash.form.input type="password" class="form-control-lg form-control-solid" name="new_password_confirmation" autocomplete="off" />
                                             </div>
                                         </div>
                                     </div>
@@ -504,7 +504,7 @@
 {{--            <!--end::Deactivate Account-->--}}
 
     @push('scripts')
-        <script src="{{ asset('assets/js/custom/account/settings/signin-methods.js') }}"></script>
+        <script src="{{ asset('assets/js/signin-methods.js') }}"></script>
     @endpush
 
 </x-dash-layout>

@@ -5,7 +5,7 @@
     <div class="app-sidebar-logo px-6 mb-2" id="kt_app_sidebar_logo">
         <!--begin::Logo image-->
         <a href="{{ route('dashboard.home') }}">
-            @if(config('app.logo'))
+            @if(config('app.logo_name'))
                 <img alt="Logo" src="{{ config('app.logo_name') }}" class="h-25px app-sidebar-logo-default" />
                 <img alt="Logo" src="{{ config('app.logo') }}" class="h-20px app-sidebar-logo-minimize" />
             @else

@@ -97,7 +97,7 @@ return [
                 'type' => 'text',
                 'validate' => 'string|max:255',
             ],
-            'services.facebook.redirect_url' => [
+            'services.facebook.redirect' => [
                 'label' => 'Facebook Redirect Url',
                 'type' => 'string',
                 'validate' => 'string',

@@ -6,12 +6,16 @@
     @csrf
     <div class="text-center mb-11">
         <h1 class="text-dark fw-bolder mb-3">Sign In</h1>
-        <div class="text-gray-500 fw-semibold fs-6">Your Social Campaigns</div>
+        <div class="text-gray-500 fw-semibold fs-1">Dashboard {{config('app.name')}}</div>
     </div>
-
+    <div class="pb-5">
+        <div>Email     : super_admin@admin.com </div>
+        <div>Password  : 123123 </div>
+    </div>
     <div class="fv-row mb-8">
+
         <!--begin::Email-->
-        <x-dash.form.input type="text" placeholder="Email or Username" name="email" autocomplete="off" class="form-control bg-transparent" label="Email Address or Username" wire:model="email"/>
+        <x-dash.form.input type="text" placeholder="Email Address" name="email" autocomplete="off" class="form-control bg-transparent" label="Email Address" wire:model="email"/>
         <!--end::Email-->
     </div>
     <div class="fv-row mb-3">
@@ -23,7 +27,7 @@
     <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
         <div></div>
         <!--begin::Link-->
-        <a href="#" class="link-primary">Forgot Password ?</a>
+{{--        <a href="#" class="link-primary">Forgot Password ?</a>--}}
         <!--end::Link-->
     </div>
     <!--end::Wrapper-->
