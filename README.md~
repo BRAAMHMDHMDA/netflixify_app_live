@@ -33,4 +33,3 @@ This video streaming application is a enables users to browse a categorized film
 - List admins that linked on role.
 - Fully manage customers (add, edit, delete, search, export data).
 - Oversee app settings from a centralized dashboard.
-- settings OAuth authentication via Google and Facebook

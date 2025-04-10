@@ -35,7 +35,7 @@
 
     let search_input = $('.form-control[type="search"]');
 
-    let options = {
+let options = {
 
     url: function (search){
         return "/movies?search="+search;

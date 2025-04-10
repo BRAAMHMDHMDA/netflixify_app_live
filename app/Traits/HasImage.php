@@ -15,7 +15,7 @@ trait HasImage
         $image = $data[$name_image_in_request];
         if ($image){
             $image_path = $image->store(static::$imageFolder, static::$imageDisk);
-            $data[$name_image_in_DB] = $image_path;
+                $data[$name_image_in_DB] = $image_path;
         }
         return $data;
     }
