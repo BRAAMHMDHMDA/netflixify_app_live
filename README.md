@@ -1,7 +1,7 @@
 [//]: # (<h1 align="center" style="font-size: 3rem; letter-spacing: 0.1em; margin-bottom: 0;">)
 
 ### 🎥 Project Demo
-[![Project Demo](https://img.youtube.com/vi/Z6VrbiO6jZ8/0.jpg)](https://www.youtube.com/watch?v=Z6VrbiO6jZ8)
+[![Project Demo](https://brightgaza.com/_next/image?url=https%3A%2F%2Fapi.taqatgaza.com%2Fstorage%2Fuploads%2Fportfolio%2F10837%2FcO1elG6DvVttL6IcRgWB.png&w=1920&q=75)](https://www.youtube.com/watch?v=Z6VrbiO6jZ8)
 
 
 [//]: # (    <a href="" style="text-decoration: none; color: white;">)
