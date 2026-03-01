@@ -15,6 +15,11 @@ yarn-error.log
 /.idea
 /.vscode
 
+# Environment files
+.env
+.env.*
+!.env.example
+
 # Track uploaded media assets only
 !/storage/
 /storage/*
