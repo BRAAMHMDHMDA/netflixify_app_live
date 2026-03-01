@@ -14,3 +14,13 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Track uploaded media assets only
+!/storage/
+/storage/*
+!/storage/app/
+/storage/app/*
+!/storage/app/public/
+/storage/app/public/*
+!/storage/app/public/media/
+!/storage/app/public/media/**
