@@ -6,6 +6,7 @@ use App\Models\Setting;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,6 +26,10 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFive();
         $this->bootSettings();
+
+        if (! $this->app->environment('local')) {
+            URL::forceScheme('https');
+        }
     }
 
     public function bootSettings(): void
