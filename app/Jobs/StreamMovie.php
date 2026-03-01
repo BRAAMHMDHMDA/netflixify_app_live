@@ -15,6 +15,15 @@ class StreamMovie implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    /**
+     * FFmpeg HLS conversion can take a long time for large videos.
+     */
+    public int $timeout = 7200;
+
+    public int $tries = 1;
+
+    public bool $failOnTimeout = true;
+
     private $movie;
     /**
      * Create a new job instance.

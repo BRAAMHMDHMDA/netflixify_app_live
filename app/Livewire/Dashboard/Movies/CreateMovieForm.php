@@ -29,7 +29,7 @@ class CreateMovieForm extends Component
 //
 //        ];
         return [
-            'video' => 'required|file|mimes:mp4',  // Ensure the uploaded file is a valid MP4 video
+            'video' => 'required|file|mimes:mp4,webm',  // Ensure the uploaded file is a valid MP4 video
             'name' => 'required|min:2|unique:movies,name',  // Validate the name is unique in the movies table
             'year' => 'required|integer',  // Ensure the year is an integer
             'rating' => 'required|numeric|between:0,5',  // Validate rating is a number between 0 and 5
