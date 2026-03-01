@@ -1,8 +1,6 @@
 <!--begin::Form-->
 <form class="form w-100"
-{{--      action="{{ route('login') }}" method="POST"--}}
-      wire:submit.prevent="submit"
->
+      wire:submit="login">
     @csrf
     <div class="text-center mb-11">
         <h1 class="text-dark fw-bolder mb-3">Sign In</h1>
@@ -35,7 +33,7 @@
     <div class="d-grid mb-10">
         <button type="submit" class="btn btn-primary" wire:loading.attr="disabled">
             <span class="indicator-label" wire:loading.remove>Sign In</span>
-            <div wire:loading wire:target="submit">
+            <div wire:loading wire:target="login">
                 Signing in, please wait
                 <span class="spinner-border spinner-border-sm text-white ms-1" role="status">
                     <span class="visually-hidden">Loading...</span>
