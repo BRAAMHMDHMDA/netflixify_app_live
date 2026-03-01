@@ -1,28 +1,11 @@
 # Stage 1 - Composer dependencies
 FROM php:8.2-fpm AS composer_deps
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    git \
-    unzip \
-    libonig-dev \
-    libzip-dev \
-    libicu-dev \
-    libsqlite3-dev \
-    libfreetype6-dev \
-    libjpeg62-turbo-dev \
-    libpng-dev \
-    libwebp-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
-    && docker-php-ext-install -j"$(nproc)" \
-    pdo_mysql \
-    pdo_sqlite \
-    mbstring \
-    intl \
-    zip \
-    bcmath \
-    gd \
-    exif \
-    && rm -rf /var/lib/apt/lists/*
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git curl unzip libpq-dev libonig-dev libzip-dev libsqlite3-dev libicu-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev zip \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install pdo pdo_mysql pdo_sqlite mbstring intl zip gd
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
@@ -31,45 +14,32 @@ COPY composer.json composer.lock ./
 RUN composer install --no-dev --optimize-autoloader --no-scripts
 
 # Stage 2 - Build Frontend (Vite)
-FROM node:18-alpine AS frontend
+FROM node:18 AS frontend
 WORKDIR /app
 COPY package*.json ./
-RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+RUN npm install
 COPY . .
 RUN npm run build
 
-# Stage 3 - Runtime (Laravel + PHP + ffmpeg)
+# Stage 3 - Backend (Laravel + PHP)
 FROM php:8.2-fpm AS backend
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ffmpeg \
-    git \
-    unzip \
-    libonig-dev \
-    libzip-dev \
-    libicu-dev \
-    libsqlite3-dev \
-    libfreetype6-dev \
-    libjpeg62-turbo-dev \
-    libpng-dev \
-    libwebp-dev \
-    libxpm-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
-    && docker-php-ext-install -j"$(nproc)" \
-    pdo_mysql \
-    pdo_sqlite \
-    mbstring \
-    intl \
-    zip \
-    bcmath \
-    gd \
-    exif \
-    && rm -rf /var/lib/apt/lists/*
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git curl unzip libpq-dev libonig-dev libzip-dev libsqlite3-dev libicu-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev zip \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install pdo pdo_mysql pdo_sqlite mbstring intl zip gd
+
+# Install Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www
 
 COPY . .
+# Copy vendor from Composer stage
 COPY --from=composer_deps /var/www/vendor ./vendor
+
+# Copy built frontend from Stage 1
 COPY --from=frontend /app/public/build ./public/build
 
 # Laravel setup
