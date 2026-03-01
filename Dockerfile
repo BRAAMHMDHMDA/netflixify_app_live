@@ -43,8 +43,14 @@ COPY --from=composer_deps /var/www/vendor ./vendor
 COPY --from=frontend /app/public/build ./public/build
 
 # Laravel runtime prep
-RUN mkdir -p storage bootstrap/cache && \
+RUN mkdir -p \
+    storage/framework/views \
+    storage/framework/cache/data \
+    storage/framework/sessions \
+    storage/framework/testing \
+    storage/logs \
+    bootstrap/cache && \
     chown -R www-data:www-data storage bootstrap/cache && \
     chmod -R ug+rwx storage bootstrap/cache
 
-CMD ["sh", "-c", "php artisan storage:link || true; php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
+CMD ["sh", "-c", "mkdir -p storage/framework/views storage/framework/cache/data storage/framework/sessions storage/framework/testing storage/logs bootstrap/cache && chmod -R ug+rwx storage bootstrap/cache && php artisan storage:link || true; php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
