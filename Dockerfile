@@ -3,7 +3,7 @@ FROM php:8.2-fpm AS composer_deps
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    git curl unzip libpq-dev libonig-dev libzip-dev libsqlite3-dev libicu-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev zip \
+    ffmpeg git curl unzip libpq-dev libonig-dev libzip-dev libsqlite3-dev libicu-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev zip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install pdo pdo_mysql pdo_sqlite mbstring intl zip gd
 
@@ -42,11 +42,9 @@ COPY --from=composer_deps /var/www/vendor ./vendor
 # Copy built frontend from Stage 1
 COPY --from=frontend /app/public/build ./public/build
 
-# Laravel setup
-RUN rm -f bootstrap/cache/\*.php && \
-    php artisan config:clear && \
-    php artisan route:clear && \
-    php artisan view:clear && \
-    php artisan storage:link
+# Laravel runtime prep
+RUN mkdir -p storage bootstrap/cache && \
+    chown -R www-data:www-data storage bootstrap/cache && \
+    chmod -R ug+rwx storage bootstrap/cache
 
-CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
+CMD ["sh", "-c", "php artisan storage:link || true; php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
