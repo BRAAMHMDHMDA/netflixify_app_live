@@ -7,8 +7,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libonig-dev \
     libzip-dev \
     libicu-dev \
+    libsqlite3-dev \
     && docker-php-ext-install -j"$(nproc)" \
     pdo_mysql \
+    pdo_sqlite \
     mbstring \
     intl \
     zip \
@@ -40,8 +42,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libonig-dev \
     libzip-dev \
     libicu-dev \
+    libsqlite3-dev \
     && docker-php-ext-install -j"$(nproc)" \
     pdo_mysql \
+    pdo_sqlite \
     mbstring \
     intl \
     zip \
@@ -52,14 +56,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /var/www
 ENV FFMPEG_BINARIES=ffmpeg
 ENV FFPROBE_BINARIES=ffprobe
+ENV DB_CONNECTION=sqlite
+ENV DB_DATABASE=/var/www/database/database.sqlite
 
 COPY . .
 COPY --from=composer_deps /var/www/vendor ./vendor
 COPY --from=frontend /app/public/build ./public/build
 
-RUN mkdir -p storage bootstrap/cache && \
+RUN touch database/database.sqlite && \
+    mkdir -p storage bootstrap/cache && \
     chown -R www-data:www-data storage bootstrap/cache && \
+    chown www-data:www-data database/database.sqlite && \
     chmod -R ug+rwx storage bootstrap/cache
 
 EXPOSE 8000
-CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT:-8000}"]
+CMD ["sh", "-c", "mkdir -p database && touch ${DB_DATABASE:-/var/www/database/database.sqlite} && php artisan serve --host=0.0.0.0 --port=${PORT:-8000}"]
